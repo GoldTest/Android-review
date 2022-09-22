@@ -5,6 +5,7 @@ object S1 {
      * 1，函数写法
      */
     fun s1Sum(a: Int, b: Int): Int {
+
         return a + b
     }
 
@@ -40,8 +41,13 @@ object S1 {
         """.trimIndent()
         print(string)
 
-        val nullString:String? = "";
-        nullString?.length
-        print("\n${nullString}")
+        lateinit var nullString: String
+        kotlin.runCatching {
+            print("\n${nullString}")
+        }
+        val aValue:Int by lazy {
+            "3322".toInt()
+        }
+        print("\n$aValue")
     }
 }

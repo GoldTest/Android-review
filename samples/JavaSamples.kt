@@ -12,6 +12,10 @@ fun main() {
 
     S1.run1()
     S1.run2()
+
+    val inta:Long = 24*60*60*1000*1000
+    val intb = 24*60*60*1000
+    print("\n${inta/intb}")
 }
 
 data class User(val name: String = "", var age: Int = 0)
